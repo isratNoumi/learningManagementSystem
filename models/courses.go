@@ -21,3 +21,12 @@ type CourseDTO struct {
 	CreatedAt  time.Time `json:"created_at"`
 	UpdatedAt  time.Time `json:"updated_at"`
 }
+type ModuleResponse struct {
+	ID        int    `json:"id"`
+	Name      string `json:"name"`
+	CoursesID int    `json:"courses_id"`
+}
+type InstructorResponse struct {
+	CoursesName     string `json:"courses_name"`
+	CoursesCategory string `json:"courses_category"`
+}
