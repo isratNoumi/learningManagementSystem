@@ -2,11 +2,11 @@ package models
 
 import "time"
 
-type Lesson struct {
+type Module struct {
 	ID        int64     `json:"id"`
 	Name      string    `json:"name"`
-	ModulesID int64     `json:"module_id"`
+	CoursesID int64     `json:"course_id"`
 	CreatedAt time.Time `json:"-"`
 	UpdatedAt time.Time `json:"-"`
-	Units     []Unit    `gorm:"foreignKey:LessonsID"`
+	Lessons   []Lesson  `json:"lessons,omitempty"gorm:"foreignKey:ModulesID"`
 }
