@@ -9,7 +9,7 @@ type Pagination struct {
 }
 
 // Response wraps the API response
-type Response struct {
+type CResponse struct {
 	Data       []CourseDTO `json:"data"`
 	Pagination Pagination  `json:"pagination"`
 	Links      []Link      `json:"links"`
